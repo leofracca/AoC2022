@@ -8,9 +8,9 @@ constexpr int DRAW = 3;
 constexpr int WIN = 6;
 
 // Points every shape gives you when you play it
-constexpr int ROCK = 1; // Rock
-constexpr int PAPER = 2; // Paper
-constexpr int SCISSORS = 3; // Scissors
+constexpr int ROCK = 1;
+constexpr int PAPER = 2;
+constexpr int SCISSORS = 3;
 
 int task1(const std::string &line)
 {
