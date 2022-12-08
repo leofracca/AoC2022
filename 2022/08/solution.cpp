@@ -32,15 +32,13 @@ int main()
     int task1 = 0, task2 = 0;
     for (int i = 1; i < trees.size() - 1; i++)
     {
-
         for (int j = 1; j < trees[i].size() - 1; j++)
         {
+            // Check if the current tree is visible from at least one side
+            // Check how many trees are visible from the current tree
             bool visibleLeft = true, visibleRight = true, visibleTop = true, visibleBottom = true; // Visible from that side
             int treesLeft = 0, treesRight = 0, treesTop = 0, treesBottom = 0; // Number of trees visible from the current tree
             int current = trees[i][j];
-
-            // Check if the current tree is visible from at least one side
-            // Check how many trees are visible from the current tree
 
             // Look left
             for (int k = j - 1; k >= 0; k--)
