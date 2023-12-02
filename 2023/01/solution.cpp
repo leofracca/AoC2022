@@ -59,7 +59,7 @@ int solution2(std::ifstream &input)
     int result = 0;
     while (std::getline(input, line))
     {
-        std::cout << line << std::endl;
+        // std::cout << line << std::endl;
         auto firstStringPos = std::string::npos;
         int lastStringPos = -1;
         std::string f = "none", l = "none";
@@ -85,8 +85,8 @@ int solution2(std::ifstream &input)
             f = l;
         if (l == "none")
             l = f;
-        std::cout << f << " " << l << std::endl;
-        std::cout << digits[f] << " " << digits[l] << std::endl;
+        // std::cout << f << " " << l << std::endl;
+        // std::cout << digits[f] << " " << digits[l] << std::endl;
 
         result += digits[f] * 10 + digits[l];
     }
@@ -102,9 +102,7 @@ int main()
     // Restore ifstream
     input.clear();
     input.seekg(0, std::ios::beg);
-    
     std::cout << solution2(input) << std::endl;
 
-    std::string test = "two1nine";
     return 0;
 }
