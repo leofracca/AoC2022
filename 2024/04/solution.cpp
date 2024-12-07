@@ -1,10 +1,7 @@
-#include <vector>
 #include <fstream>
 #include <iostream>
-#include <string>
-#include <regex>
 
-constexpr int SIZE = 140 + 2; // Actual size + borders
+constexpr int SIZE = 140 + 2; // Actual size + padding
 
 void parseInput(std::ifstream& input, char words[SIZE][SIZE])
 {

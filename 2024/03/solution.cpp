@@ -13,31 +13,6 @@ void parseInput(std::ifstream& input, std::string& memory)
     }
 }
 
-bool isSafe(const std::vector<int>& report)
-{
-    int a = report[0];
-    int b = report[1];
-    bool isIncreasing = a < b;
-    bool isSafe = true;
-
-    int i;
-    for (i = 1; i < report.size(); i++)
-    {
-        a = report[i - 1];
-        b = report[i];
-
-        if ((a == b) ||
-            (std::abs(a - b) > 3) ||
-            (isIncreasing && a > b) ||
-            (!isIncreasing && a < b))
-        {
-            return false;
-        }
-    }
-
-    return true;
-}
-
 int solution1(const std::string& memory)
 {
     int ans = 0;

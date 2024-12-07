@@ -25,7 +25,7 @@ void parseInput(std::ifstream& input, std::vector<std::pair<uint64_t, std::vecto
     }
 }
 
-bool recursionHelper1(uint64_t expectedResult, const std::vector<int>& operands, uint64_t currentResult, int index)
+bool recursionHelper1(const uint64_t expectedResult, const std::vector<int>& operands, uint64_t currentResult, int index)
 {
     if (expectedResult == currentResult && index == operands.size())
         return true;
@@ -38,7 +38,7 @@ bool recursionHelper1(uint64_t expectedResult, const std::vector<int>& operands,
            recursionHelper1(expectedResult, operands, currentResult * operands[index], index + 1);
 }
 
-bool recursionHelper2(uint64_t expectedResult, const std::vector<int>& operands, uint64_t currentResult, int index)
+bool recursionHelper2(const uint64_t expectedResult, const std::vector<int>& operands, uint64_t currentResult, int index)
 {
     if (expectedResult == currentResult && index == operands.size())
         return true;

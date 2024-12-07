@@ -3,8 +3,6 @@
 #include <iostream>
 #include <string>
 #include <sstream>
-#include <algorithm>
-#include <unordered_map>
 
 void parseInput(std::ifstream& input, std::vector<std::vector<int>>& reports)
 {
@@ -29,8 +27,7 @@ bool isSafe(const std::vector<int>& report)
     bool isIncreasing = a < b;
     bool isSafe = true;
 
-    int i;
-    for (i = 1; i < report.size(); i++)
+    for (int i = 1; i < report.size(); i++)
     {
         a = report[i - 1];
         b = report[i];

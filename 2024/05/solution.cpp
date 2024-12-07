@@ -43,7 +43,7 @@ void parseInput(std::ifstream& input, std::set<std::pair<int, int>>& rules, std:
     }
 }
 
-int solution1(std::set<std::pair<int, int>>& rules, std::vector<std::vector<int>>& udpates)
+int solution1(const std::set<std::pair<int, int>>& rules, const std::vector<std::vector<int>>& udpates)
 {
     int ans = 0;
 
@@ -68,7 +68,7 @@ int solution1(std::set<std::pair<int, int>>& rules, std::vector<std::vector<int>
     return ans;
 }
 
-int solution2(std::set<std::pair<int, int>>& rules, std::vector<std::vector<int>>& udpates)
+int solution2(const std::set<std::pair<int, int>>& rules, std::vector<std::vector<int>>& udpates)
 {
     int ans = 0;
 
